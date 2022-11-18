@@ -1,0 +1,61 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>login</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>Iniciar Sesion</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <form [formGroup]="loginForm" (ngSubmit)="logeado(loginForm.value)">
+        <ion-item>
+          <ion-label>Usuario</ion-label>
+          <ion-input formControlName="username"></ion-input>
+          <ion-note slot="error"
+        *ngIf="campo('username').invalid  && campo('username').errors && campo('username').errors.required && fueTocado('username') ">
+        Este campo es requerido
+      </ion-note>
+      <ion-note
+      slot="error"
+        *ngIf="campo('username').invalid  && campo('username').errors && campo('username').errors.maxlength && fueTocado('username') "
+      >
+        Los caracteres maximos son 15
+      </ion-note>
+      <ion-note
+      slot="error"
+        *ngIf="campo('username').invalid  && campo('username').errors && campo('username').errors.minlength && fueTocado('username') "
+      >
+        Los caracteres minimos son 1
+      </ion-note>
+        </ion-item>
+        <ion-item>
+          <ion-label>Contraseña</ion-label>
+          <ion-input formControlName="password" type="password"></ion-input>
+          <ion-note slot="error"
+        *ngIf="campo('password').invalid  && campo('password').errors && campo('password').errors.required && fueTocado('password') ">
+        Este campo es requerido
+      </ion-note>
+      <ion-note
+      slot="error"
+        *ngIf="campo('password').invalid  && campo('password').errors && campo('password').errors.maxlength && fueTocado('password') "
+      >
+        Los caracteres maximos son 15
+      </ion-note>
+      <ion-note
+      slot="error"
+        *ngIf="campo('password').invalid  && campo('password').errors && campo('password').errors.minlength && fueTocado('password') "
+      >
+        Los caracteres minimos son 1
+      </ion-note>
+    </ion-item>
+        <ion-item>
+          <ion-button type="submit">Acceder</ion-button>
+        </ion-item>
+
+      </form>
+    </ion-card-content>
+  </ion-card>
+</ion-content>
