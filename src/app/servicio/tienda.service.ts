@@ -39,11 +39,11 @@ export class TiendaService {
     })
   }
 
-public verificar(){
+public verificar(usaurio: Usuario){
   fetch('https://dummyjson.com/auth/login', {
   method: 'GET', /* or POST/PUT/PATCH/DELETE */
   headers: {
-    'Authorization': 'Bearer ',
+    'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidXNlcm5hbWUiOiJhdHVueTAiLCJlbWFpbCI6ImF0dW55MEBzb2h1LmNvbSIsImZpcnN0TmFtZSI6IlRlcnJ5IiwibGFzdE5hbWUiOiJNZWRodXJzdCIsImdlbmRlciI6Im1hbGUiLCJpbWFnZSI6Imh0dHBzOi8vcm9ib2hhc2gub3JnL2hpY3ZlbGRpY3RhLnBuZyIsImlhdCI6MTY2ODgyMjI4MSwiZXhwIjoxNjY4ODI1ODgxfQ.mAqo6CZTF6AbeEiKHtIzESAkzhhOhQe7cHhNMyN-LdQ  ',
     'Content-Type': 'application/json'
   },
 })

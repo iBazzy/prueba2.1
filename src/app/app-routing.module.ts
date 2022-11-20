@@ -7,7 +7,7 @@ const routes: Routes = [
     loadChildren: () => import('./user/registro/registro.module').then( m => m.RegistroPageModule)
   },
   {
-    path: 'login',
+    path: '',
     loadChildren: () => import('./user/login/login.module').then( m => m.LoginPageModule)
   },
   {
@@ -15,7 +15,7 @@ const routes: Routes = [
     loadChildren: () => import('./carrito/carrito-compra/carrito-compra.module').then( m => m.CarritoCompraPageModule)
   },
   {
-    path: '',
+    path: 'inicio',
     loadChildren: () => import('./inicio/inicio.module').then( m => m.InicioPageModule)
   },
 ];

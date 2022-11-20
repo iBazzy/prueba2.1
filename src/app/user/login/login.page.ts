@@ -40,13 +40,16 @@ export class LoginPage implements OnInit {
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({
 
-        username: usuario.username,
-        password: usuario.password,
+        username: 'atuny0',
+        password: '9uQFF1Lh',
         // expiresInMins: 60, // optional
       })
     })
     .then(res => res.json())
     .then(console.log);
+    console.log(usuario)
+    this.TiendaApi.verificar(usuario)
+
 
   }
 
